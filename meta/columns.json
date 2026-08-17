@@ -87,6 +87,72 @@
     "cellType": "chain",
     "group": "identity"
   },
+  "resourceTypes": {
+    "key": "resourceTypes",
+    "label": "Resource Types",
+    "icon": "lucide:Cpu",
+    "description": "Compute resources offered by the provider.",
+    "filter": "searchableMultiSelect",
+    "sorting": "arrayLength",
+    "pinning": null,
+    "cellType": "arrayPopover",
+    "group": "capabilities"
+  },
+  "provisioningMode": {
+    "key": "provisioningMode",
+    "label": "Provisioning Mode",
+    "icon": "lucide:ServerCog",
+    "description": "How compute resources are provisioned.",
+    "filter": "searchableMultiSelect",
+    "sorting": "arrayLength",
+    "pinning": null,
+    "cellType": "arrayPopover",
+    "group": "serviceDetails"
+  },
+  "workloadTypes": {
+    "key": "workloadTypes",
+    "label": "Workload Types",
+    "icon": "lucide:Workflow",
+    "description": "Workloads supported by the compute offering.",
+    "filter": "searchableMultiSelect",
+    "sorting": "arrayLength",
+    "pinning": null,
+    "cellType": "arrayPopover",
+    "group": "capabilities"
+  },
+  "interfaces": {
+    "key": "interfaces",
+    "label": "Interfaces",
+    "icon": "lucide:Plug",
+    "description": "Interfaces available for provisioning or using compute.",
+    "filter": "searchableMultiSelect",
+    "sorting": "arrayLength",
+    "pinning": null,
+    "cellType": "arrayPopover",
+    "group": "serviceDetails"
+  },
+  "pricingUnit": {
+    "key": "pricingUnit",
+    "label": "Pricing Unit",
+    "icon": "lucide:BadgeDollarSign",
+    "description": "Unit or market mechanism used for compute pricing.",
+    "filter": "searchableMultiSelect",
+    "sorting": "string",
+    "pinning": null,
+    "cellType": null,
+    "group": "pricingAndSlas"
+  },
+  "minimumCommitment": {
+    "key": "minimumCommitment",
+    "label": "Minimum Commitment",
+    "icon": "lucide:Clock",
+    "description": "Optional minimum rental or usage commitment.",
+    "filter": "searchableMultiSelect",
+    "sorting": "string",
+    "pinning": null,
+    "cellType": null,
+    "group": "pricingAndSlas"
+  },
   "apiType": {
     "key": "apiType",
     "label": "API Type",

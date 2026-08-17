@@ -60,6 +60,12 @@
     "icon": "lucide:BringToFront",
     "description": "Tools for transferring tokens and data across different blockchains."
   },
+  "compute": {
+    "key": "compute",
+    "label": "Compute",
+    "icon": "lucide:Cpu",
+    "description": "CPU and GPU compute infrastructure for AI, rendering, batch, and general workloads."
+  },
   "services": {
     "key": "services",
     "label": "Services",

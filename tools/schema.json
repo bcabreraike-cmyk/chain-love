@@ -14,6 +14,7 @@
     "explorers": { "type": "array", "items": { "$ref": "#/$defs/explorers" } },
     "oracles": { "type": "array", "items": { "$ref": "#/$defs/oracles" } },
     "bridges": { "type": "array", "items": { "$ref": "#/$defs/bridges" } },
+    "compute": { "type": "array", "items": { "$ref": "#/$defs/compute" } },
     "services": { "type": "array", "items": { "$ref": "#/$defs/services" } },
     "storages": { "type": "array", "items": { "$ref": "#/$defs/storages" } },
     "faucets": { "type": "array", "items": { "$ref": "#/$defs/faucets" } },
@@ -318,6 +319,71 @@
         "sdk",
         "actionButtons",
         "tag"
+      ]
+    },
+
+    "compute": {
+      "title": "Compute",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "slug": { "type": "string" },
+        "provider": { "type": "string" },
+        "offer": { "type": ["string", "null"] },
+        "actionButtons": {
+          "type": ["array", "null"],
+          "items": { "type": "string" }
+        },
+        "resourceTypes": {
+          "type": ["array", "null"],
+          "items": { "type": "string", "enum": ["cpu", "gpu", "accelerator"] }
+        },
+        "provisioningMode": {
+          "type": ["array", "null"],
+          "items": { "type": "string", "enum": ["container", "vm", "bare_metal", "serverless", "marketplace", "mixed"] }
+        },
+        "workloadTypes": {
+          "type": ["array", "null"],
+          "items": { "type": "string", "enum": ["general_compute", "ai_inference", "ai_training", "rendering", "batch", "scientific"] }
+        },
+        "hardware": {
+          "type": ["array", "null"],
+          "items": { "type": "string" }
+        },
+        "interfaces": {
+          "type": ["array", "null"],
+          "items": { "type": "string", "enum": ["web", "api", "cli", "docker", "kubernetes", "sdk"] }
+        },
+        "pricingUnit": {
+          "type": ["string", "null"],
+          "enum": ["hour", "second", "job", "market-based", null]
+        },
+        "minimumCommitment": { "type": ["string", "null"] },
+        "price": { "type": ["string", "null"] },
+        "planType": { "type": ["string", "null"] },
+        "planName": { "type": ["string", "null"] },
+        "starred": { "type": "boolean" },
+        "tag": { "type": ["array", "null"], "items": { "type": "string" } },
+        "description": { "type": ["string", "null"] }
+      },
+      "required": [
+        "slug",
+        "provider",
+        "offer",
+        "actionButtons",
+        "resourceTypes",
+        "provisioningMode",
+        "workloadTypes",
+        "hardware",
+        "interfaces",
+        "pricingUnit",
+        "minimumCommitment",
+        "price",
+        "planType",
+        "planName",
+        "starred",
+        "tag",
+        "description"
       ]
     },
 
@@ -960,6 +1026,7 @@
         "apis": { "type": "array", "items": { "type": "string" } },
         "oracles": { "type": "array", "items": { "type": "string" } },
         "bridges": { "type": "array", "items": { "type": "string" } },
+        "compute": { "type": "array", "items": { "type": "string" } },
         "explorers": { "type": "array", "items": { "type": "string" } },
         "faucets": { "type": "array", "items": { "type": "string" } },
         "analytics": { "type": "array", "items": { "type": "string" } },
@@ -1059,6 +1126,7 @@
               "explorers",
               "oracles",
               "bridges",
+              "compute",
               "services",
               "storages",
               "faucets",
